@@ -14,20 +14,8 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/ptsans-400.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/ptsans-700.woff2") format("woff2");
-  font-display: swap;
+html {
+  background-color:#F2F2F2;  
 }
 
 body {
@@ -36,9 +24,12 @@ body {
   font-style: normal;
   font-size: 18px;
   line-height: 21px;
-  color:black;
-  background-color:#F2F2F2;
+  color: #000000;
+  max-width: 1200px;
+  margin: 0;
 }
+
+
 
 .button {
   font-family: "PT Sans",sans-serif;
@@ -47,7 +38,7 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-align: center;
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: #82B3D3;
   border-radius: 4px;
   text-decoration: none;
@@ -77,13 +68,17 @@ body {
 /*MAIN*/
 
 .main-index {
-  color: #000000;
-  background-color: #FFFFFF;
+  background-color: #fcc92f;
+}
+.main-picture {
   background-image: url("../images/html/welcome-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  }
-h2 {
+}
+.advantages {
+  background-color: #FFFFFF;
+}
+.title-second-level {
 font-weight: 700;
 font-size: 30px;
 line-height: 36px;
@@ -115,7 +110,6 @@ text-transform: uppercase;
   height: 384px;
 }
 .advantages-item-midle {
-  background: #FFFFFF;
   color:#000000; 
   width: 400px;
   height: 384px
@@ -132,7 +126,7 @@ text-transform: uppercase;
   width: 400px;
   height: 384px
 }
-h4 {
+.title-fourth-level {
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
@@ -140,18 +134,18 @@ h4 {
   line-height: 28px;
   text-transform: uppercase;
 }
-h4.advantages-title-blok {
-  color: #FFFFFF;
-  }
 
+img {
+  max-width: 800px;
+  text-align: right;
+}
 
 /* Поиск гостиницы */
 
 .index-columns {
   text-align: center;
-  background-color: #FFFFFF;
-  width:1200px;
-  height:417px;
+  width: 1200px;
+  height: 417px;
 }
 .found-description {
   font-size: 22px;
@@ -175,9 +169,8 @@ h4.advantages-title-blok {
 /* Подпишись на рассылку */
 .index-columns-second {
   text-align: center;
-  background-color: #0000FF;
+  background-color: #fcc92f;
   background-image: url("../images/html/html-background.jpg");
-  color: #FFFFFF;
   width:1200px;
   height:417px;
 }
