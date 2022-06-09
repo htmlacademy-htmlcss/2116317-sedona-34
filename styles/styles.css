@@ -25,23 +25,24 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+  background-color: #FFFFFF;
   max-width: 1200px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 
-
 .button {
-  font-family: "PT Sans",sans-serif;
+  font-family: inherit;
   font-style: normal;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
   text-align: center;
   color: #FFFFFF;
-  background-color: #82B3D3;
-  border-radius: 4px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -54,7 +55,7 @@ body {
 }
 
 .navigation-link{
-  font-family: "PT Sans", sans-serif;
+  font-family: inherit;
   line-height: 26px;
   font-weight: 700;
   font-size: 20px;
@@ -67,17 +68,13 @@ body {
 
 /*MAIN*/
 
-.main-index {
-  background-color: #fcc92f;
-}
 .main-picture {
   background-image: url("../images/html/welcome-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-color: #fcc92f;
 }
-.advantages {
-  background-color: #FFFFFF;
-}
+
 .title-second-level {
 font-weight: 700;
 font-size: 30px;
@@ -127,7 +124,7 @@ text-transform: uppercase;
   height: 384px
 }
 .title-fourth-level {
-  font-family: 'PT Sans';
+  font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -144,7 +141,6 @@ img {
 
 .index-columns {
   text-align: center;
-  width: 1200px;
   height: 417px;
 }
 .found-description {
@@ -155,24 +151,17 @@ img {
   background: #756157;
   width:574px;
   height:60px;
-  vertical-align:middle;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  display: flex;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  position: absolute;
-}
+  border-radius: 4px;
+  }
 
 /* Подпишись на рассылку */
 .index-columns-second {
   text-align: center;
   background-color: #fcc92f;
   background-image: url("../images/html/html-background.jpg");
+  background-repeat: no-repeat;
   width:1200px;
-  height:417px;
+  min-height:417px;
 }
 .newsletter-discription {
   font-size: 22px;
@@ -190,19 +179,32 @@ img {
   display: flex;
   align-items: center;
 }
+.newsletter{
+  background: #82B3D3;
+  border-radius: 0px 10px 10px 0px;
+  position: absolute;
+  width:200px;
+  height:60px;
+}
 
 
 /* FOOTER */
 
 /* Контакты */
 
-page-footer {
-  font-size: 40px;
-  font-weight: 400;
+.page-footer {
+  weight: 1200px;
+  min-height: 120px;
   color: #000000;
-  text-align: center;
-  text-transform: uppercase;
   background-color: #FFFFFF;
-  background-image: url("../images/logo-html-footer.svg");
   background-repeat: repeat;
+}
+
+.contacts-phone {
+position: absolute;
+font-family: inherit;
+font-size: 40px;
+line-height: 40px;
+text-align: center;
+text-transform: uppercase;
 }
