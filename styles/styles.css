@@ -62,7 +62,6 @@ body {
   color: inherit;
   background-color: inherit;
   text-decoration: none;
-  text-transform: capitalize;
 }
 
 /*MAIN*/
@@ -71,7 +70,7 @@ body {
   background-image: url("../images/html/welcome-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: #fcc92f;
+  background-color: #9a8f6c;
 }
 
 .title-second-level {
@@ -93,39 +92,34 @@ text-transform: uppercase;
 .advantages-list {
   text-align: center;
   }
-.advantages-reason-blok {
+.advantages-reason {
+  color:#000000;
+  width: 400px;
+  min-height: 384px;
+}
+
+.white-reason {
   background: #82B3D3;
   color:#FFFFFF;
-  width: 400px;
-  height: 384px;
   }
 .advantages-item {
-  background: rgba(131, 179, 211, 0.12);
   color:#000000;
   width: 400px;
-  height: 384px;
+  min-height: 384px;
 }
-.advantages-item-midle {
-  color:#000000; 
-  width: 400px;
-  height: 384px
-}
-.advantages-reason-side {
+.side-item {
   background: rgba(131, 179, 211, 0.12);
-  color:#000000;
-  width: 400px;
-  height: 384px
 }
-.advantages-reason-midle {
+.midle-item {
+  background: #FFFFFF;
+}
+.side-reason {
+  background: rgba(131, 179, 211, 0.12); 
+}
+.midle-reason {
   background: rgba(131, 179, 211, 0.2);
-  color:#000000;
-  width: 400px;
-  height: 384px
 }
 .title-fourth-level {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -148,27 +142,28 @@ img {
 }
 .found-form {
   background: #756157;
-  width:574px;
-  height:60px;
+  width: 574px;
+  min-height: 60px;
   border-radius: 4px;
   }
 
 /* Подпишись на рассылку */
 .index-columns-second {
   text-align: center;
-  background-color: #fcc92f;
+  background-color: #9a8f6c;
+  color: #FFFFFF;
   background-image: url("../images/html/html-background.jpg");
   background-repeat: no-repeat;
-  width:1200px;
-  min-height:417px;
+  width: 1200px;
+  min-height: 417px;
 }
 .newsletter-discription {
   font-size: 22px;
   line-height: 26px;
 }
 .newsletter-email {
-  width:1200px;
-  height:411px; 
+  width: 1200px;
+  height: 411px; 
   background: #F2F2F2;
   border-radius: 0px 10px 10px 0px;
   color: #000000;
@@ -181,9 +176,8 @@ img {
 .newsletter{
   background: #82B3D3;
   border-radius: 0px 10px 10px 0px;
-  position: absolute;
-  width:200px;
-  height:60px;
+  width: 200px;
+  min-height: 60px;
 }
 
 
@@ -192,11 +186,11 @@ img {
 /* Контакты */
 
 .page-footer {
-  weight: 1200px;
+  width: 1200px;
   min-height: 120px;
   color: #000000;
   background-color: #FFFFFF;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
 }
 
 .contacts-phone {
@@ -219,13 +213,13 @@ text-transform: uppercase;
   background-size: cover;
   color: #FFFFFF;
   background-repeat: no-repeat;
-  background-color: #e84c4c;
-  width: 1199.53px;
+  background-color: #9a8f6c;
+  width: 1200px;
   min-height: 403px;
 }
 
 .inner-header-title {
-font-family: 'PT Sans';
+font-family: "PT Sans";
 font-style: normal;
 font-weight: 700;
 font-size: 60px;
@@ -257,8 +251,8 @@ color: #FFFFFF;
   border-radius: 4px;
   font-size: 16px;
   line-height: 20px;
-  width:160px;
-  height:48px;
+  width: 160px;
+  min-height: 48px;
 }
 
 .criteries-reset {
@@ -266,15 +260,11 @@ color: #FFFFFF;
   font-size: 16px;
   line-height: 20px;
   text-transform: unset;
-  background-color: Transparent;
+  background-color: transparent;
   border: none;
 }
 
 /*Результаты поиска:Сортировка*/
-.catalog-title {
-  text-align: left;
-}
-
 .select-control {
   color: #333333;
 }
@@ -297,8 +287,8 @@ color: #FFFFFF;
   border: none;
   border-radius: 4px;
   border: none;
-  width:140px;
-  height:37px;
+  width: 140px;
+  height: 37px;
 }
 
 .add-favorite {
@@ -307,8 +297,8 @@ color: #FFFFFF;
   background: #82B3D3;
   border: none;
   border-radius: 4px;
-  width:140px;
-  height:37px;
+  width: 140px;
+  min-height: 37px;
 }
 
 .added-favorite {
@@ -317,16 +307,16 @@ color: #FFFFFF;
   background: #7DB54F;
   border: none;
   border-radius: 4px;
-  width:140px;
-  height:37px; 
+  width: 140px;
+  min-height: 37px; 
 }
 
 .hotel-rating {
   background: #F2F2F2;
   border-radius: 4px;
-  width:140px;
-  height:37px;
-  left:160px;
+  width: 140px;
+  min-height: 37px;
+  left: 160px;
   
   font-size: 16px;
   line-height: 20px;
@@ -348,15 +338,12 @@ text-transform: uppercase;
 
 .pagination-link {
 background: #82B3D3;
-border: 1px solid #82B3D3;
-width:60px;
-height:60px;
-radius:4px;
+width: 60px;
+min-height: 60px;
 }
 
 .pagination-current {
 background: #F2F2F2;
-border-radius: 4px;
-border:none;
+border: none;
 }
 
