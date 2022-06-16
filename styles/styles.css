@@ -43,10 +43,14 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   text-transform: uppercase;
+  border: none;
 }
-
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
 
 /* HEADER */
 .header-title{
@@ -73,8 +77,8 @@ body {
   display: flex;
   list-style-type:none;
   justify-content: space-around;
-  margin: 0pt;
-  padding: 0pt;
+  margin: 0px;
+  padding: 0px;
 }
 .list{
   flex-grow: 0;
@@ -91,8 +95,12 @@ body {
 
 /*MAIN*/
 .page-container {
-  width: 1200px
+  width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-picture {
@@ -100,77 +108,106 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-color: #9a8f6c;
+  height: 485px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 
 .main-picture-welcome {
   margin: 51px 372px 83px 372px;
-  padding: 0px 1px 1px 0px;
-  min-height: 485px;
+  }
+
+.info {
+  margin: 0;
+  min-height: 282px;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
   }
 
 .title-second-level {
 font-weight: 700;
 font-size: 30px;
 line-height: 36px;
-text-align: center;
 text-transform: uppercase;
+word-wrap: break-word;
+padding:0;
+margin: 0;
+min-width: 700px;
+text-align: center;
 }
 .reasons {
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  word-wrap: break-word;
+  padding: 0px;
+  margin-top: 31px;
+  min-width: 660px;
   text-align: center;
-  color:#333333;
 }
 
 /* Причины выбора */
-.advantages-list {
-  text-align: center;
+.advantages {
   display: flex;
-  justify-content: flex-start;
-  margin: 0px;
+  width: 1200px;
+  justify-content: space-between;
+  margin: 0 auto;
   padding: 0px;
+}
+.advantages-list {
+  display: flex;
   flex-wrap: wrap;
-  }
-  .involve {
-    display: flex;
-    justify-content: flex-start;
-    margin: 0px;
-    padding: 0px;
-    flex-wrap: wrap;
-  }
-
-.advantages-reason {
-  color:#000000;
+  list-style-type:none;
+  margin: 0;
+  padding: 0px;
+}
+.advantages-reason.involve {
+  display: flex;
+  flex-wrap: wrap;
+}
+.advantages-reason.white-reason {
+  display: flex;
   width: 400px;
   min-height: 384px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .white-reason {
   background: #82B3D3;
   color:#FFFFFF;
   }
 .advantages-items {
-  color:#000000;
-  width: 400px;
-  min-height: 384px;
-  display: flex;
-  justify-content: flex-start;
+  list-style-type:none;
   margin: 0px;
   padding: 0px;
-  flex-wrap: wrap;
-  flex-direction: row;
+
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 .side-item {
+  width: 400px;
+  min-height: 384px;
   background: rgba(131, 179, 211, 0.12);
 }
 .midle-item {
+  width: 400px;
+  min-height: 384px;
   background: #FFFFFF;
 }
 .side-reason {
+  width: 400px;
+  min-height: 384px;
   background: rgba(131, 179, 211, 0.12);
 }
 .midle-reason {
+  width: 400px;
+  min-height: 384px;
   background: rgba(131, 179, 211, 0.2);
 }
 .title-fourth-level {
@@ -178,7 +215,6 @@ text-transform: uppercase;
   line-height: 28px;
   text-transform: uppercase;
 }
-
 photo1-home-sedona {
   display: flex;
   max-width: 800px;
@@ -189,15 +225,22 @@ photo1-home-sedona {
 
 .index-columns {
   text-align: center;
-  height: 417px;
-}
+  min-height: 417px;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  }
+
 .found-description {
   font-size: 22px;
   line-height: 26px;
 }
 .found-form {
   background: #756157;
-  width: 574px;
+  min-width: 574px;
   min-height: 60px;
   border-radius: 4px;
   }
@@ -209,25 +252,42 @@ photo1-home-sedona {
   color: #FFFFFF;
   background-image: url("../images/html/html-background.jpg");
   background-repeat: no-repeat;
-  width: 1200px;
+}
+.newsletter-list {
+  text-align: center;
   min-height: 417px;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+flex-direction: column;
 }
 .newsletter-discription {
   font-size: 22px;
   line-height: 26px;
 }
-.newsletter-email {
-  width: 1200px;
-  height: 411px;
+.newsletter-form {
+  display: flex;
+}
+
+.field {
+  width: 600px;
+  height: 60px;
   background: #F2F2F2;
   border-radius: 0px 10px 10px 0px;
-  color: #000000;
-  opacity: 0.6;
-  font-size: 18px;
-  line-height: 21px;
-  display: flex;
-  align-items: center;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  border: none;
+
 }
+
+::placeholder {
+font-size: 18px;
+line-height: 21px;
+align-items: flex-start;
+opacity: 0.6;
+}
+
 .newsletter{
   background: #82B3D3;
   border-radius: 0px 10px 10px 0px;
@@ -243,18 +303,33 @@ photo1-home-sedona {
 .page-footer {
   width: 1200px;
   min-height: 120px;
-  color: #000000;
   background-color: #FFFFFF;
   background-repeat: no-repeat;
 }
 
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.footer-social-list {
+  width: 142px;
+  margin-right: 42px;
+  list-style-type:none;
+}
+
+.label-academy {
+  margin-left: auto;
+  max-width: 115px;
+}
+
+
 .contacts-phone {
-position: absolute;
-font-family: inherit;
-font-size: 40px;
-line-height: 40px;
-text-align: center;
-text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
 }
 
 /*CATALOG*/
