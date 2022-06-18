@@ -324,13 +324,12 @@ opacity: 0.6;
   margin-left: auto;
   max-width: 115px;
 }
-
-
 .contacts-phone {
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
 }
+
 
 /*CATALOG*/
 
@@ -346,6 +345,12 @@ opacity: 0.6;
   background-color: #9a8f6c;
   width: 1200px;
   min-height: 403px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .inner-header-title {
@@ -368,13 +373,25 @@ color: #FFFFFF;
   color: inherit;
 }
 
+.criteries-filter {
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+}
 .criteries-filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
 }
-
+.criteries-filter-group {
+  min-width: 150px;
+  min-height: 149px;
+}
+.criteries-filter-buttons {
+  width: 518px;
+  min-height: 149px;
+}
 .criteries-apply {
   background: #82B3D3;
   border: none;
@@ -384,7 +401,6 @@ color: #FFFFFF;
   width: 160px;
   min-height: 48px;
 }
-
 .criteries-reset {
   font-weight: 400;
   font-size: 16px;
@@ -395,21 +411,74 @@ color: #FFFFFF;
 }
 
 /*Результаты поиска:Сортировка*/
-.select-control {
-  color: #333333;
+.catalog-right-column {
+  align-content: space-between;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 1200px;
 }
 
-/*Результаты поиска:Найденный список*/
+.select-block {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  height: 49px;
+  padding: 0px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+
+}
+.catalog-title {
+  text-align: left;
+  margin-left: 72px;
+  margin-right: 191px;
+  padding: 0px;
+  min-width: 338px;
+}
+.select-control {
+  color: #333333;
+  width: 290px;
+  margin-left: auto;
+  margin-right: 78px;
+  padding: 0px;
+  }
+.select-control-choice {
+  width: 160px;
+  text-align: center;
+  display: inherit;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: 71px;
+  padding: 0px;
+  }
+
+/*Найденные места*/
+.place-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  width: 1200px;
+  list-style-type: none;
+  margin: 56px 71px 96px 73px;
+  padding: 0px;
+}
+.place-card {
+  width: 340px;
+  min-height: 438px;
+}
 .place-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
 }
-
 .place-tipe-card {
   color: #333333;
 }
-
 .more-info {
   font-size: 16px;
   line-height: 20px;
@@ -420,7 +489,6 @@ color: #FFFFFF;
   width: 140px;
   height: 37px;
 }
-
 .add-favorite {
   font-size: 16px;
   line-height: 20px;
@@ -430,7 +498,6 @@ color: #FFFFFF;
   width: 140px;
   min-height: 37px;
 }
-
 .added-favorite {
   font-size: 16px;
   line-height: 20px;
@@ -440,7 +507,6 @@ color: #FFFFFF;
   width: 140px;
   min-height: 37px;
 }
-
 .hotel-rating {
   background: #F2F2F2;
   border-radius: 4px;
@@ -455,7 +521,15 @@ color: #FFFFFF;
   color: #333333;
 }
 
-/*Страницы поиска-пагинация*/
+/*Пагинация*/
+.select-block-button {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  height: 60px;
+  padding: 0px;
+  margin: 0px 71px 25px 73px;
+}
 .pagination {
 font-weight: 700;
 font-size: 20px;
