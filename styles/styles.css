@@ -58,11 +58,12 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  width: 1060px;
+  margin: 0 auto;
   }
 
 .logo {
   display:block;
-  margin-left: 70px;
   flex-grow: 0;
 }
 
@@ -83,50 +84,30 @@ body {
 .list{
   flex-grow: 0;
   min-width: 390px;
-  padding: 20px 62px 20px 17px;
   margin-left: 30px;
 }
 .user{
   flex-grow: 1;
-  margin-right: 70px;
   padding:14px 0px 14px 12px;
   }
 
 
 /*MAIN*/
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
 .main-picture {
   background-image: url("../images/html/welcome-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-color: #9a8f6c;
   height: 485px;
+  width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 63px;
   }
 
 .main-picture-welcome {
-  margin: 51px 372px 83px 372px;
-  }
-
-.info {
-  margin: 0;
-  min-height: 282px;
-  max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  flex-direction: column;
+  margin: 51px auto 83px 372px;
   }
 
 .title-second-level {
@@ -134,9 +115,8 @@ font-weight: 700;
 font-size: 30px;
 line-height: 36px;
 text-transform: uppercase;
-word-wrap: break-word;
 padding:0;
-margin: 0;
+margin-bottom: 31px;
 min-width: 700px;
 text-align: center;
 }
@@ -145,9 +125,9 @@ text-align: center;
   line-height: 26px;
   word-wrap: break-word;
   padding: 0px;
-  margin-top: 31px;
   min-width: 660px;
   text-align: center;
+  margin-bottom: 90px;
 }
 
 /* Причины выбора */
@@ -156,14 +136,15 @@ text-align: center;
   width: 1200px;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0px;
+  margin-bottom: 91px;
+  padding: 0;
 }
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
   list-style-type:none;
   margin: 0;
-  padding: 0px;
+  padding: 0;
 }
 .advantages-reason.involve {
   display: flex;
@@ -215,7 +196,7 @@ text-align: center;
   line-height: 28px;
   text-transform: uppercase;
 }
-photo1-home-sedona {
+.photo1-home-sedona {
   display: flex;
   max-width: 800px;
   text-align: right;
@@ -225,7 +206,6 @@ photo1-home-sedona {
 
 .index-columns {
   text-align: center;
-  min-height: 417px;
   width: 1200px;
   display: flex;
   flex-wrap: wrap;
@@ -234,40 +214,68 @@ photo1-home-sedona {
   flex-direction: column;
   }
 
+.title-third-level {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  padding: 0;
+  margin-bottom: 29px;
+  min-width: 700px;
+  text-align: center;
+}
+
 .found-description {
   font-size: 22px;
   line-height: 26px;
+  margin-bottom: 56px;
 }
 .found-form {
   background: #756157;
   min-width: 574px;
   min-height: 60px;
   border-radius: 4px;
+  margin-bottom: 93px;
   }
 
 /* Подпишись на рассылку */
-.index-columns-second {
-  text-align: center;
-  background-color: #9a8f6c;
-  color: #FFFFFF;
-  background-image: url("../images/html/html-background.jpg");
-  background-repeat: no-repeat;
-}
+
 .newsletter-list {
+  margin: 0;
+  padding: 94px 0px 94px 0px;
   text-align: center;
-  min-height: 417px;
   width: 1200px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-flex-direction: column;
+  flex-direction: column;
+  background-color: #9a8f6c;
+  color: #FFFFFF;
+  background-image: url("../images/html/html-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+.catalog-news {
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #000000;
+}
+
 .newsletter-discription {
+  margin: 0;
+  padding: 0;
   font-size: 22px;
   line-height: 26px;
+  margin-bottom: 46px;
 }
+.catalog-discription {
+  color: #333333;
+}
+
 .newsletter-form {
+  margin: 0;
+  padding: 0;
   display: flex;
 }
 
@@ -275,8 +283,7 @@ flex-direction: column;
   width: 600px;
   height: 60px;
   background: #F2F2F2;
-  border-radius: 0px 10px 10px 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  border-radius: 10px 0px 0px 10px;
   border: none;
 
 }
@@ -301,17 +308,9 @@ opacity: 0.6;
 /* Контакты */
 
 .page-footer {
-  width: 1200px;
-  min-height: 120px;
-  background-color: #FFFFFF;
-  background-repeat: no-repeat;
-}
-
-.page-footer-container {
+  width: 1060px;
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
-  align-items: center;
+  margin: 40px 70px 30px 70px;
 }
 
 .footer-social-list {
@@ -343,30 +342,31 @@ opacity: 0.6;
   color: #FFFFFF;
   background-repeat: no-repeat;
   background-color: #9a8f6c;
-  width: 1200px;
-  min-height: 403px;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  flex-direction: column;
+  margin: 0;
+  padding: 35px 70px 70px 70px;
 }
 
 .inner-header-title {
-font-family: "PT Sans";
-font-style: normal;
-font-weight: 700;
-font-size: 60px;
-line-height: 78px;
-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
 }
 
 
 .breadcrumbs {
+  margin: 0;
+  padding: 0;
   color: inherit;
   font-size: 16px;
   line-height: 21px;
+  margin-bottom: 40px;
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
@@ -374,24 +374,26 @@ color: #FFFFFF;
 }
 
 .criteries-filter {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: no-wrap;
   justify-content: space-between;
+
 }
 .criteries-filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
+
 }
 .criteries-filter-group {
   min-width: 150px;
-  min-height: 149px;
 }
 .criteries-filter-buttons {
-  width: 518px;
-  min-height: 149px;
-}
+  width: 160px;
+ }
 .criteries-apply {
   background: #82B3D3;
   border: none;
@@ -399,7 +401,6 @@ color: #FFFFFF;
   font-size: 16px;
   line-height: 20px;
   width: 160px;
-  min-height: 48px;
 }
 .criteries-reset {
   font-weight: 400;
@@ -411,30 +412,21 @@ color: #FFFFFF;
 }
 
 /*Результаты поиска:Сортировка*/
-.catalog-right-column {
-  align-content: space-between;
-  justify-content: space-between;
-  padding: 0px;
-  margin: 0px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 1200px;
+.rezult{
+  width: 1058px;
+  padding: 50px 71px 0px 71px;
 }
 
 .select-block {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
   height: 49px;
   padding: 0px;
-  margin-top: 50px;
-  margin-bottom: 0px;
-
+  margin-bottom: 56px;
 }
 .catalog-title {
   text-align: left;
-  margin-left: 72px;
+  margin: 0;
   margin-right: 191px;
   padding: 0px;
   min-width: 338px;
@@ -452,7 +444,6 @@ color: #FFFFFF;
   display: inherit;
   justify-content: space-between;
   margin-left: auto;
-  margin-right: 71px;
   padding: 0px;
   }
 
@@ -460,16 +451,15 @@ color: #FFFFFF;
 .place-list {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
   justify-content: space-between;
-  width: 1200px;
   list-style-type: none;
-  margin: 56px 71px 96px 73px;
+  margin-bottom:  96px;
   padding: 0px;
 }
 .place-card {
-  width: 340px;
-  min-height: 438px;
+  width: 300px;
+  min-height: 398px;
+  padding: 20px;
 }
 .place-card-title {
   font-weight: 700;
@@ -525,7 +515,6 @@ color: #FFFFFF;
 .select-block-button {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
   height: 60px;
   padding: 0px;
   margin: 0px 71px 25px 73px;
