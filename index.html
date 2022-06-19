@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-  
+
 
 <!-- HEADER -->
 
@@ -15,8 +15,8 @@
     <img src="images/logo-html-header.svg" width="139" height="70"alt="Логотип HTML Academy">
   </a>
 
- <nav class="navigation">
-  <ul class="navigation-list">
+ <nav class="navigation-block">
+  <ul class="navigation list">
    <li class="navigation-item">
     <a class="navigation-link">Главная</a>
   </li>
@@ -27,14 +27,14 @@
     <a class="navigation-link" href="catalog.html">Гостиницы</a>
   </li>
   </ul>
-  <ul class="navigation-list navigation-user">
+  <ul class="navigation user">
   <li class="navigation-item">
     <a class="navigation-link" href="#"><span class="visually-hidden">Поиск<span></a>
   </li>
   <li class="navigation-item">
     <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
   </li>
-  <li class="navigation-item">
+  <li class="navigation-item item-button">
     <a class="navigation-link" href="#">Хочу сюда</a>
   </li>
   </ul>
@@ -48,23 +48,23 @@
     <div class="main-picture">
       <img class="main-picture-welcome" src="images/html/text-welcome-to-sedone.svg" width="458" height="352" alt="Welcome to geogeos Sedone">
     </div>
-    <h2 class="title-second-level">Седона — небольшой городок в Аризоне,заслуживающий большего!</h2>  
+    <h2 class="title-second-level">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
     <p class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
 
 <!-- Причины выбора -->
 <section class="advantages">
-  <h4 class="visually-hidden">Преимущества</h4>
- 
+
   <ol class="advantages-list">
 
-    <li class="advantages-reason">
+    <li class="advantages-reason involve">
       <div class="advantages-reason white-reason">
         <h4 class="title-fourth-level">Настоящий городок</h4>
         <span class="reason-numb">-№1-</span>
         <p class="reason-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
       </div>
       <img class="photo1-home-sedona" src="images/html/real-city.jpg" width="800" height="384" alt="Дом в Седоне">
-      <ul class="advantages-item">
+
+      <ul class="advantages-items">
         <li class="advantages-item side-item">
           <h4 class="title-fourth-level">Жильё</h4>
           <p class="advantages-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -79,8 +79,8 @@
         </li>
       </ul>
     </li>
-    
-    <li class="advantages-reason">
+
+    <li class="advantages-reason involve">
       <img class="photo2-mountains" src="images/html/devol-bridge.jpg"width="800" height="384" alt="Горы в Седоне">
       <div class="advantages-reason white-reason">
         <h4 class="title-fourth-level">Там есть мост дьявола</h4>
@@ -113,17 +113,16 @@
 
 <section class="index-columns">
   <h2 class="visually-hidden">Поиск гостиниц</h2>
-  <h2 class="title-second-level">Заинтересовались?</h2>
-  <p class="found-description">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+  <h3 class="title-third-level">Заинтересовались?</h2>
+  <p class="found-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
   <a class="button found-form" href="#">Поиск гостиницы в Седоне</a>
 </section>
-  
+
 
 <!-- Подпишись на рассылку -->
-<div class="index-columns-second">
-<section class="advantages">
-  <h2 class="title-second-level">Подпишитесь на рассылку</h2>
-  <p class="newsletter-discription">Только полезная информация и никакого спама, честное бойскаутское!</p>
+<section class="newsletter-list">
+  <h3 class="title-third-level">Подпишитесь на рассылку</h2>
+  <p class="newsletter-discription">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
   <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
     <label class="visually-hidden" for="newsletter-email">Введите Ваш e-mail></e-mail></label>
     <input class="field" id="newsletter-email" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
@@ -132,36 +131,36 @@
     </button>
   </form>
 </section>
-</div>
+
 </main>
 
 <!-- FOOTER -->
 
 <!-- Контакты -->
 <footer class="page-footer">
- 
-   <h2 class="visually-hidden">Социальные сети</h2>
+
+    <h2 class="visually-hidden">Социальные сети</h2>
     <ul class="footer-social-list">
-      
+
       <li class="footer-social-item">
         <a class="button" href="https://vk.com/htmlacademy">
-          <img src="images/logo-vk.svg" width="24" height="14"alt="Vkontakte">
+          <img src="images/logo-vk.svg" width="24" height="14" alt="Vkontakte">
         </a>
       </li>
-      
+
       <li class="footer-social-item">
         <a class="button" href="https://t.me/htmlacademy">
-          <img src="images/logo-telegram.svg" width="18" height="16"alt="Telegram">
+          <img src="images/logo-telegram.svg" width="18" height="16" alt="Telegram">
         </a>
       </li>
-      
+
       <li class="footer-social-item">
         <a class="button" href="https://www.youtube.com/user/htmlacademyru">
-          <img src="images/logo-youtube.svg" width="22" height="17"alt="Youtube">          
+          <img src="images/logo-youtube.svg" width="22" height="17" alt="Youtube">
         </a>
       </li>
     </ul>
-  
+
 <!--Номер для связи -->
     <address class="contacts-address">
       <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
@@ -171,7 +170,6 @@
   <a class="label-academy" href="#" aria-label="Логотип">
     <img class="footer-contacts-logo" src="images/logo-html-footer.svg" width="115" height="33" alt="Логотип html Academy">
   </a>
-    
 
 </footer>
   </body>

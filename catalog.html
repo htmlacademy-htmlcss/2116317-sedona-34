@@ -8,32 +8,31 @@
   <body>
 
 <!-- HEADER -->
-
 <header class="header-title">
   <a class="logo">
     <img src="images/logo-html-header.svg" width="139" height="70"alt="Логотип HTML Academy">
   </a>
 
- <nav class="navigation">
-  <ul class="navigation-list">
+ <nav class="navigation-block">
+  <ul class="navigation list">
    <li class="navigation-item">
     <a class="navigation-link">Главная</a>
   </li>
   <li class="navigation-item">
-    <a class="navigation-link" href="#">О Седоне</a>
+    <a class="navigation-link" href="index.html">О Седоне</a>
   </li>
   <li class="navigation-item">
-    <a class="navigation-link" href="hotel.html">Гостиницы</a>
+    <a class="navigation-link" href="#">Гостиницы</a>
   </li>
   </ul>
-  <ul class="navigation-list navigation-user">
+  <ul class="navigation user">
   <li class="navigation-item">
     <a class="navigation-link" href="#"><span class="visually-hidden">Поиск<span></a>
   </li>
   <li class="navigation-item">
     <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
   </li>
-  <li class="navigation-item">
+  <li class="navigation-item item-button">
     <a class="navigation-link" href="#">Хочу сюда</a>
   </li>
   </ul>
@@ -41,11 +40,10 @@
 </header>
 
 <!-- MAIN-->
+<main class="main-inner">
 
 <!--Гостиницы Седоны-->
-<main class="main-inner">
   <header class="inner-header">
-    
     <h1 class="inner-header-title">Гостиницы Седоны</h1>
     <ul class="breadcrumbs">
       <li class="breadcrumbs-item">
@@ -55,12 +53,12 @@
         <a class="breadcrumbs-link">Гостиницы</a>
       </li>
     </ul>
-    
 <!-- Критерии поиска:инфраструктура-->
     <section class="criteries">
       <h2 class="visually-hidden">Критерии поиска</h2>
-     
+
       <form class="criteries-filter" action="https://echo.htmlacademy.ru/" method="get">
+<!-- Критерии поиска:инфраструктура-->
         <fieldset class="criteries-filter-group">
           <legend class="criteries-filter-title">Инфраструктура:</legend>
           <ul class="criteries-filter-list">
@@ -84,7 +82,7 @@
             </li>
           </ul>
         </fieldset>
-        
+
 <!-- Критерии поиска:тип жилья-->
         <fieldset class="criteries-filter-group">
           <legend class="criteries-filter-title">Тип жилья:</legend>
@@ -109,37 +107,48 @@
             </li>
           </ul>
         </fieldset>
-                   
-            <button class="button criteries-apply" type="submit">Применить</button>
-            <button class="button criteries-reset" type="reset">Сбросить</button>
-          </form>
-        </section>
+<!-- Кнопки:применить/сбросить-->
+      <div class="criteries-filter-buttons">
+         <button class="button criteries-apply" type="submit">Применить</button>
+         <button class="button criteries-reset" type="reset">Сбросить</button>
+      </div>
+
+      </form>
+
+      </section>
+
       </header>
 
 <!--Результаты поиска:Сортировка-->
-      <section class="rezult">
-        <h2 class="visually-hidden">Результаты поиска</h2>
-        <h2 class="title-second-level catalog-title">Найдено гостиниц:38</h2>
-        
-        <select class="select-control" aria-label="Сортировка">
+  <section class="rezult">
+   <h2 class="visually-hidden">Результаты поиска</h2>
+
+    <div class="select-block">
+      <h2 class="title-second-level catalog-title">Найдено гостиниц:38</h2>
+      <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвое</option>
           <option value="expensive">Сначала дорогое</option>
           <option value="popular">Сначала популярное</option>
         </select>
       <div class="select-control-choice">
       <a href="#" class="button button-light">
+        <img class="place-card-icon" src="images/catalog/icon-view-pictures.svg" width="16" height="14" alt="Иконка показать картинки">
         <span class="visually-hidden">Показать карточки</span>
       </a>
       <a class="button" href="#">
+        <img class="place-card-icon" src="images/catalog/icon-view-slideshow.svg" width="16" height="14" alt="Иконка показать слайдшоу">
         <span class="visually-hidden">Показать слайдшоу</span>
       </a>
       <a class="button" href="#">
+        <img class="place-card-icon" src="images/catalog/icon-view-list.svg" width="16" height="14" alt="Иконка показать список">
         <span class="visually-hidden">Показать список</span>
       </a>
     </div>
-   
-<!--Результаты поиска:Найденный список-->
-      <ul class="place-list">
+    </div>
+
+
+    <!--Найденные места-->
+     <ul class="place-list">
 
         <li class="place-card">
           <div class="place-card-link">
@@ -157,7 +166,7 @@
               <li class="place-rating-star"></li>
               <li class="place-rating-star"></li>
               <li class="place-rating-star"></li>
-            </ul>            
+            </ul>
             <p class="hotel-rating">Рейтинг:8,5</p>
           </div>
         </li>
@@ -178,7 +187,7 @@
               <li class="place-rating-star"></li>
               <li class="place-rating-star"></li>
               <li class="place-rating-star"></li>
-            </ul>            
+            </ul>
             <p class="hotel-rating">Рейтинг:9,2</p>
           </div>
         </li>
@@ -198,7 +207,7 @@
               <li class="place-rating-star"></li>
               <li class="place-rating-star"></li>
               <li class="place-rating-star"></li>
-            </ul>            
+            </ul>
             <p class="hotel-rating">Рейтинг:6,9</p>
           </div>
         </li>
@@ -217,15 +226,15 @@
             <ul class="rating-star">
               <li class="place-rating-star"></li>
               <li class="place-rating-star"></li>
-            </ul>            
+            </ul>
             <p class="hotel-rating">Рейтинг:5,0</p>
           </div>
         </li>
-      </ul>
 
-<!--Страницы поиска-->
+      </ul>
+      <!--Пагинация-->
       <h3 class="visually-hidden">Выбор страницы поиска</h3>
-      
+      <div class="select-block-button">
       <ul class="pagination">
         <li class="pagination-item">
           <a class="pagination-link pagination-current">1</a>
@@ -246,70 +255,69 @@
           <a class="pagination-link" href="#">10</a>
         </li>
       </ul>
-          
+
       <p class="searching-results-page">Гостиниц на странице:</p>
       <select class="select-control" aria-label="Сортировка">
         <option value="four">4</option>
         <option value="six">6</option>
         <option value="eight">8</option>
       </select>
+      </div>
+
     </section>
 
 
 <!-- Подпишись на рассылку -->
-<div class="index-columns-second">
-  <section class="advantages">
-    <h2 class="title-second-level">Подпишитесь на рассылку</h2>
-    <p class="newsletter-discription">Только полезная информация и никакого спама, честное бойскаутское!</p>
-    <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-      <label class="visually-hidden" for="newsletter-email">Введите Ваш e-mail></e-mail></label>
-      <input class="field" id="newsletter-email" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
-      <button class="button newsletter" type="submit">
-        Подписаться
-      </button>
-    </form>
-  </section>
-  </div>
-  </main>
-  
-  <!-- FOOTER -->
-  
-  <!-- Контакты -->
-  <footer class="page-footer">
-   
-     <h2 class="visually-hidden">Социальные сети</h2>
-      <ul class="footer-social-list">
-        
-        <li class="footer-social-item">
-          <a class="button" href="https://vk.com/htmlacademy">
-            <img src="images/logo-vk.svg" width="24" height="14"alt="Vkontakte">
-          </a>
-        </li>
-        
-        <li class="footer-social-item">
-          <a class="button" href="https://t.me/htmlacademy">
-            <img src="images/logo-telegram.svg" width="18" height="16"alt="Telegram">
-          </a>
-        </li>
-        
-        <li class="footer-social-item">
-          <a class="button" href="https://www.youtube.com/user/htmlacademyru">
-            <img src="images/logo-youtube.svg" width="22" height="17"alt="Youtube">          
-          </a>
-        </li>
-      </ul>
-    
-  <!--Номер для связи -->
-      <address class="contacts-address">
-        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      </address>
-  
-    <!-- Логотип -->
-    <a class="label-academy" href="#" aria-label="Логотип">
-      <img class="footer-contacts-logo" src="images/logo-html-footer.svg" width="115" height="33" alt="Логотип html Academy">
-    </a>
-      
-  
-  </footer>
+<section class="newsletter-list catalog-news">
+  <h2 class="title-second-level">Подпишитесь на рассылку</h2>
+  <p class="newsletter-discription catalog-discription">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+  <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+    <label class="visually-hidden" for="newsletter-email">Введите Ваш e-mail></label>
+    <input class="field" id="newsletter-email" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
+    <button class="button newsletter" type="submit">
+      Подписаться
+    </button>
+  </form>
+</section>
+
+ </main>
+
+<!-- FOOTER -->
+<!-- Контакты -->
+<footer class="page-footer">
+
+    <h2 class="visually-hidden">Социальные сети</h2>
+    <ul class="footer-social-list">
+
+      <li class="footer-social-item">
+        <a class="button" href="https://vk.com/htmlacademy">
+          <img src="images/logo-vk.svg" width="24" height="14" alt="Vkontakte">
+        </a>
+      </li>
+
+      <li class="footer-social-item">
+        <a class="button" href="https://t.me/htmlacademy">
+          <img src="images/logo-telegram.svg" width="18" height="16" alt="Telegram">
+        </a>
+      </li>
+
+      <li class="footer-social-item">
+        <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+          <img src="images/logo-youtube.svg" width="22" height="17" alt="Youtube">
+        </a>
+      </li>
+    </ul>
+
+<!--Номер для связи -->
+    <address class="contacts-address">
+      <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+    </address>
+
+  <!-- Логотип -->
+  <a class="label-academy" href="https://htmlacademy.ru" aria-label="Логотип">
+    <img class="footer-contacts-logo" src="images/logo-html-footer.svg" width="115" height="33" alt="Логотип html Academy">
+  </a>
+</footer>
+
     </body>
     </html>
