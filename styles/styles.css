@@ -48,8 +48,14 @@ body {
   border: none;
 }
 .visually-hidden {
-  position: fixed;
-  transform: scale(0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* HEADER */
@@ -65,31 +71,47 @@ body {
 .logo {
   display:block;
   flex-grow: 0;
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
 }
 
-.navigation-block {
-  display: flex;
-  color: #000000;
-  flex-grow: 1;
-  list-style-type:none;
-  align-items: center;
-}
 .navigation {
   display: flex;
-  list-style-type:none;
-  justify-content: space-around;
-  margin: 0px;
-  padding: 0px;
+  width: 891px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
 }
-.list{
-  flex-grow: 0;
-  min-width: 390px;
-  margin-left: 30px;
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 390px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
-.user{
-  flex-grow: 1;
-  padding:14px 0px 14px 12px;
+.navigation-item {
+  display: block;
+  margin: 0;
+  padding: 20px 17px;
+  text-align: center;
+  text-decoration: none;
+}
+.navigation-user{
+  display: flex;
+  flex-wrap: wrap;
+  width: 265px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   }
+  .navigation-list.navigation-user {
+    min-width: 42px;
+    min-height: 66px;
+  }
+
+
 
 
 /*MAIN*/
@@ -116,6 +138,7 @@ font-size: 30px;
 line-height: 36px;
 text-transform: uppercase;
 padding:0;
+margin: 0;
 margin-bottom: 31px;
 min-width: 700px;
 text-align: center;
@@ -124,10 +147,11 @@ text-align: center;
   font-size: 22px;
   line-height: 26px;
   word-wrap: break-word;
-  padding: 0px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 90px;
   min-width: 660px;
   text-align: center;
-  margin-bottom: 90px;
 }
 
 /* Причины выбора */
@@ -150,58 +174,74 @@ text-align: center;
   display: flex;
   flex-wrap: wrap;
 }
-.advantages-reason.white-reason {
+.reason {
   display: flex;
-  width: 400px;
-  min-height: 384px;
-  justify-content: center;
-  align-items: center;
+  width: 230px;
+  min-height: 200px;
   flex-direction: column;
+  padding: 92px 85px;
+  margin: 0;
 }
 .white-reason {
   background: #82B3D3;
   color:#FFFFFF;
-  }
-.advantages-items {
-  list-style-type:none;
-  margin: 0px;
-  padding: 0px;
-
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-between;
-}
-.side-item {
-  width: 400px;
-  min-height: 384px;
-  background: rgba(131, 179, 211, 0.12);
-}
-.midle-item {
-  width: 400px;
-  min-height: 384px;
-  background: #FFFFFF;
 }
 .side-reason {
-  width: 400px;
-  min-height: 384px;
   background: rgba(131, 179, 211, 0.12);
 }
 .midle-reason {
-  width: 400px;
-  min-height: 384px;
   background: rgba(131, 179, 211, 0.2);
+}
+.advantages-items {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.advantages-item {
+  display: flex;
+  width: 230px;
+  min-height: 223px;
+  flex-direction: column;
+  padding: 80px 85px;
+  margin: 0;
+  background: rgba(131, 179, 211, 0.12);
+}
+.midle-item {
+  background: #FFFFFF;
 }
 .title-fourth-level {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  text-align: center;
+}
+.reason-numb {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  text-align: center;
+}
+.reason-description {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 .photo1-home-sedona {
   display: flex;
   max-width: 800px;
   text-align: right;
 }
-
+.advantages-description {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333333;
+}
 /* Поиск гостиницы */
 
 .index-columns {
@@ -213,22 +253,24 @@ text-align: center;
   justify-content: center;
   flex-direction: column;
   }
-
 .title-third-level {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   padding: 0;
+  margin: 0;
   margin-bottom: 29px;
   min-width: 700px;
   text-align: center;
 }
-
 .found-description {
+  margin: 0;
+  margin-bottom: 56px;
+  padding: 0;
   font-size: 22px;
   line-height: 26px;
-  margin-bottom: 56px;
+  color: #333333;
 }
 .found-form {
   background: #756157;
@@ -244,41 +286,24 @@ text-align: center;
   margin: 0;
   padding: 94px 0px 94px 0px;
   text-align: center;
-  width: 1200px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: center;
   flex-direction: column;
   background-color: #9a8f6c;
   color: #FFFFFF;
   background-image: url("../images/html/html-background.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
 }
-.catalog-news {
-  background-color: #FFFFFF;
-  background-image: none;
-  color: #000000;
-}
-
-.newsletter-discription {
-  margin: 0;
-  padding: 0;
-  font-size: 22px;
-  line-height: 26px;
+.news-description {
+  color: #FFFFFF;
   margin-bottom: 46px;
 }
-.catalog-discription {
-  color: #333333;
-}
-
 .newsletter-form {
   margin: 0;
   padding: 0;
   display: flex;
 }
-
 .field {
   width: 600px;
   height: 60px;
@@ -287,14 +312,12 @@ text-align: center;
   border: none;
 
 }
-
 ::placeholder {
 font-size: 18px;
 line-height: 21px;
 align-items: flex-start;
 opacity: 0.6;
 }
-
 .newsletter{
   background: #82B3D3;
   border-radius: 0px 10px 10px 0px;
@@ -310,23 +333,30 @@ opacity: 0.6;
 .page-footer {
   width: 1060px;
   display: flex;
-  margin: 40px 70px 30px 70px;
+  margin: 0 auto;
+  padding: 45px 0px 35px;
 }
-
 .footer-social-list {
-  width: 142px;
-  margin-right: 42px;
-  list-style-type:none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 144px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
-
-.label-academy {
-  margin-left: auto;
-  max-width: 115px;
-}
-.contacts-phone {
+.footer-social-item {
+  width: 48px;
+  height: 40px;
+ }
+ .contacts-phone {
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
+  margin-left: 236px;
+}
+.label-academy {
+  margin-left: auto;
+  max-width: 115px;
 }
 
 
@@ -461,13 +491,30 @@ opacity: 0.6;
   min-height: 398px;
   padding: 20px;
 }
+.place-card-image {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+}
 .place-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
 }
 .place-tipe-card {
   color: #333333;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+}
+.place-price-card {
+  color: #333333;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
 }
 .more-info {
   font-size: 16px;
