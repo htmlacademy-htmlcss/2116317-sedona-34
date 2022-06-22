@@ -390,19 +390,19 @@ opacity: 0.6;
 
 
 .breadcrumbs {
+  display: flex;
   margin: 0;
   padding: 0;
-  color: inherit;
   font-size: 16px;
   line-height: 21px;
   margin-bottom: 40px;
   list-style-type: none;
+  min-width: 111px;
+  min-height: 21px;
 }
-
-.breadcrumbs-link {
-  color: inherit;
+.breadcrumbs-item {
+  margin-right: 10px;
 }
-
 .criteries-filter {
   margin: 0;
   padding: 0;
@@ -459,7 +459,6 @@ opacity: 0.6;
   padding: 0px;
   margin-bottom: 56px;
 }
-
 .catalog-title {
   text-align: left;
   margin: 0;
@@ -481,6 +480,7 @@ opacity: 0.6;
   justify-content: space-between;
   margin-left: auto;
   padding: 0px;
+  background-color: #9a8f6c;
   }
 
 
