@@ -9,17 +9,17 @@
 
 <!-- HEADER -->
 <header class="header-title">
-  <a class="logo">
+  <a class="logo" href="index.html">
     <img src="images/logo-html-header.svg" width="139" height="70"alt="Логотип HTML Academy">
   </a>
 
  <nav class="navigation">
   <ul class="navigation-list">
    <li class="navigation-item">
-    <a class="navigation-link">Главная</a>
+    <a class="navigation-link" href="index.html">Главная</a>
   </li>
   <li class="navigation-item">
-    <a class="navigation-link" href="index.html">О Седоне</a>
+    <a class="navigation-link" href="#">О Седоне</a>
   </li>
   <li class="navigation-item">
     <a class="navigation-link" href="#">Гостиницы</a>
@@ -33,7 +33,7 @@
     <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
   </li>
   <li class="navigation-item">
-    <a class="navigation-link" href="#">Хочу сюда</a>
+    <a class="button navigation-button" href="#">Хочу сюда!</a>
   </li>
   </ul>
 </nav>
@@ -233,8 +233,8 @@
 
       </ul>
       <!--Пагинация-->
+      <section class="select-block-button">
       <h3 class="visually-hidden">Выбор страницы поиска</h3>
-      <div class="select-block-button">
       <ul class="pagination">
         <li class="pagination-item">
           <a class="pagination-link pagination-current">1</a>
@@ -262,17 +262,17 @@
         <option value="six">6</option>
         <option value="eight">8</option>
       </select>
-      </div>
+    </section>
 
     </section>
 
 
 <!-- Подпишись на рассылку -->
-<section class="newsletter-list">
+<section class="newsletter-list catalog-news">
   <h3 class="title-third-level">Подпишитесь на рассылку</h2>
-  <p class="found-description news-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+  <p class="found-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
   <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-    <label class="visually-hidden" for="newsletter-email">Введите Ваш e-mail></e-mail></label>
+    <label class="visually-hidden" for="newsletter-email">Введите Ваш e-mail></label>
     <input class="field" id="newsletter-email" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
     <button class="button newsletter" type="submit">
       Подписаться
