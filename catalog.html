@@ -9,31 +9,31 @@
 
 <!-- HEADER -->
 <header class="header-title">
-  <a class="logo">
+  <a class="logo" href="index.html">
     <img src="images/logo-html-header.svg" width="139" height="70"alt="Логотип HTML Academy">
   </a>
 
- <nav class="navigation-block">
-  <ul class="navigation list">
+ <nav class="navigation">
+  <ul class="navigation-list">
    <li class="navigation-item">
-    <a class="navigation-link">Главная</a>
+    <a class="navigation-link" href="index.html">Главная</a>
   </li>
   <li class="navigation-item">
-    <a class="navigation-link" href="index.html">О Седоне</a>
+    <a class="navigation-link" href="#">О Седоне</a>
   </li>
   <li class="navigation-item">
     <a class="navigation-link" href="#">Гостиницы</a>
   </li>
   </ul>
-  <ul class="navigation user">
+  <ul class="navigation-list navigation-user">
   <li class="navigation-item">
     <a class="navigation-link" href="#"><span class="visually-hidden">Поиск<span></a>
   </li>
   <li class="navigation-item">
     <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
   </li>
-  <li class="navigation-item item-button">
-    <a class="navigation-link" href="#">Хочу сюда</a>
+  <li class="navigation-item">
+    <a class="button navigation-button" href="#">Хочу сюда!</a>
   </li>
   </ul>
 </nav>
@@ -109,8 +109,8 @@
         </fieldset>
 <!-- Кнопки:применить/сбросить-->
       <div class="criteries-filter-buttons">
-         <button class="button criteries-apply" type="submit">Применить</button>
-         <button class="button criteries-reset" type="reset">Сбросить</button>
+         <button class="criteries-button button" type="submit">Применить</button>
+         <button class="criteries-reset button" type="reset">Сбросить</button>
       </div>
 
       </form>
@@ -131,15 +131,15 @@
           <option value="popular">Сначала популярное</option>
         </select>
       <div class="select-control-choice">
-      <a href="#" class="button button-light">
+      <a href="#" class="button button-select">
         <img class="place-card-icon" src="images/catalog/icon-view-pictures.svg" width="16" height="14" alt="Иконка показать картинки">
         <span class="visually-hidden">Показать карточки</span>
       </a>
-      <a class="button" href="#">
+      <a class="button button-select" href="#">
         <img class="place-card-icon" src="images/catalog/icon-view-slideshow.svg" width="16" height="14" alt="Иконка показать слайдшоу">
         <span class="visually-hidden">Показать слайдшоу</span>
       </a>
-      <a class="button" href="#">
+      <a class="button button-select" href="#">
         <img class="place-card-icon" src="images/catalog/icon-view-list.svg" width="16" height="14" alt="Иконка показать список">
         <span class="visually-hidden">Показать список</span>
       </a>
@@ -233,11 +233,11 @@
 
       </ul>
       <!--Пагинация-->
+      <section class="select-block-button">
       <h3 class="visually-hidden">Выбор страницы поиска</h3>
-      <div class="select-block-button">
       <ul class="pagination">
-        <li class="pagination-item">
-          <a class="pagination-link pagination-current">1</a>
+        <li class="pagination-item current-item">
+          <a class="pagination-link current-link">1</a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link" href="#">2</a>
@@ -257,20 +257,20 @@
       </ul>
 
       <p class="searching-results-page">Гостиниц на странице:</p>
-      <select class="select-control" aria-label="Сортировка">
+      <select class="select-control page-select" aria-label="Сортировка">
         <option value="four">4</option>
         <option value="six">6</option>
         <option value="eight">8</option>
       </select>
-      </div>
+    </section>
 
     </section>
 
 
 <!-- Подпишись на рассылку -->
 <section class="newsletter-list catalog-news">
-  <h2 class="title-second-level">Подпишитесь на рассылку</h2>
-  <p class="newsletter-discription catalog-discription">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+  <h3 class="title-third-level">Подпишитесь на рассылку</h2>
+  <p class="found-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
   <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
     <label class="visually-hidden" for="newsletter-email">Введите Ваш e-mail></label>
     <input class="field" id="newsletter-email" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
