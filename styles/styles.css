@@ -35,6 +35,7 @@ body {
 /*Общие стили*/
 
 .button {
+  font-family: "PT Sans",sans-serif;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -151,8 +152,6 @@ text-align: center;
 
 /* Причины выбора */
 .advantages {
-  display: flex;
-  flex-wrap: wrap;
   width: 1200px;
   margin-bottom: 91px;
   padding: 0;
@@ -169,25 +168,31 @@ text-align: center;
   text-align: center;
 }
 .advantages-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   list-style-type:none;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
-.advantages-reason.involve {
-  display: flex;
-  flex-wrap: wrap;
+.advantages-reason.involve-first {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-area: 1/1/2/4;
 }
 .reason {
-  display: flex;
+  display: grid;
   width: 230px;
   min-height: 344px;
-  flex-direction: column;
   padding: 20px 85px;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
+  align-content: center;
+  justify-items: center;
+}
+.advantages-reason.involve-second {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-area: 2/1/3/4
+}
+.advantages-reason-photo-second {
+  grid-area: 1/1/3/3;
 }
 .white-reason {
   background: #82B3D3;
@@ -201,21 +206,19 @@ text-align: center;
 }
 .advantages-items {
   list-style-type: none;
-  margin: 0px;
   padding: 0px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-area: 2/1/3/3;
 }
 .advantages-item {
-  display: flex;
+  display: grid;
   width: 230px;
   min-height: 344px;
-  flex-direction: column;
   padding: 20px 85px;
-  margin: 0;
+  align-content: center;
+  justify-items: center;
   background: rgba(131, 179, 211, 0.12);
-  justify-content: center;
-  align-items: center;
 }
 .midle-item {
   background: #FFFFFF;
@@ -241,10 +244,7 @@ text-align: center;
   padding: 0;
   text-align: center;
 }
-.advantages-reason-photo {
-  display: flex;
-  max-width: 800px;
-  }
+
 .advantages-description {
   margin: 0;
   padding: 0;
@@ -481,8 +481,8 @@ opacity: 0.6;
 /*Результаты поиска:Сортировка*/
 
 .rezult{
-  width: 1058px;
-  padding: 50px 71px 0px 71px;
+  width: 1060px;
+  padding: 50px 70px 0px 70px;
 }
 
 .select-block {
@@ -522,13 +522,14 @@ opacity: 0.6;
 
 /*Найденные места*/
 .place-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   list-style-type: none;
   margin: 0;
-  margin-bottom:  96px;
-  padding: 0px;
+  margin-bottom: 96px;
+  padding: 0;
+  gap: 20px;
 }
 .place-card {
   width: 300px;
@@ -552,64 +553,70 @@ opacity: 0.6;
   margin-bottom: 16px;
   padding: 0;
 }
-.place-tipe-card {
-  color: #333333;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 16px;
+.place-card-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-between;
 }
-.place-price-card {
+.place-criteries {
   color: #333333;
   padding: 0;
-  margin: 0;
   margin-bottom: 16px;
+  width: 140px;
+
 }
 .more-info {
   font-size: 16px;
   line-height: 20px;
   background: #756157;
   border: none;
-  border: none;
-  width: 140px;
-  height: 37px;
-  padding: 0;
-  margin: 0;
+  min-width: 110px;
+  padding: 9px 15px;
   margin-bottom: 16px;
-  margin-top: 16px;
 }
 .add-favorite {
-  font-size: 16px;
-  line-height: 20px;
   background: #82B3D3;
   border: none;
-  width: 140px;
-  min-height: 37px;
-  padding: 0;
-  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  min-width: 110px;
+  padding: 9px 15px;
   margin-bottom: 16px;
 }
 .added-favorite {
-  font-size: 16px;
-  line-height: 20px;
   background: #7DB54F;
   border: none;
-  width: 140px;
-  min-height: 37px;
-  padding: 0;
-  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  min-width: 110px;
+  padding: 9px 15px;
   margin-bottom: 16px;
+}
+.place-rating {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .hotel-rating {
   background: #F2F2F2;
-  width: 140px;
-  min-height: 37px;
-  left: 160px;
-
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 4px;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #333333;
+  min-width: 110px;
+  min-height: 20px;
+  padding: 9px 15px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.rating-star {
+  display: flex;
+  flex-direction: row;
 }
 
 /*Пагинация*/
