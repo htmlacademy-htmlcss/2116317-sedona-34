@@ -70,6 +70,8 @@ body {
   margin: 0;
   padding: 0;
   margin-right: 30px;
+}
+.logotipe {
   display: block;
 }
 .navigation {
@@ -121,6 +123,9 @@ body {
 
 /*Index*/
 /*MAIN*/
+.main-index {
+  margin-top: -5px;
+}
 .main-picture {
   background-image: url("../images/html/welcome-background.jpg");
   background-size: 100% auto;
@@ -168,7 +173,8 @@ text-align: center;
   text-align: center;
 }
 .advantages-list {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   list-style-type:none;
   padding: 0;
   margin: 0;
@@ -176,7 +182,6 @@ text-align: center;
 .advantages-reason.involve-first {
   display: grid;
   grid-template-columns: 400px 400px 400px;
-  grid-area: 1/1/2/4;
 }
 .reason {
   display: grid;
@@ -189,10 +194,14 @@ text-align: center;
 .advantages-reason.involve-second {
   display: grid;
   grid-template-columns: 400px 400px 400px;
-  grid-area: 2/1/3/4
+}
+.advantages-reason-photo {
+  grid-column-start: 2;
+  grid-column-end: 4;
 }
 .advantages-reason-photo-second {
-  grid-area: 1/1/3/3;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 .white-reason {
   background: #82B3D3;
@@ -209,7 +218,8 @@ text-align: center;
   padding: 0px;
   display: grid;
   grid-template-columns: 400px 400px 400px;
-  grid-area: 2/1/3/3;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 .advantages-item {
   display: grid;
@@ -312,6 +322,7 @@ text-align: center;
 }
 .field {
   width: 600px;
+  height: 60px;
   background: #F2F2F2;
   border-radius: 10px 0px 0px 10px;
   border: none;
@@ -329,12 +340,12 @@ opacity: 0.6;
   border-radius: 0px 10px 10px 0px;
   border: none;
   width: 200px;
-  min-height: 60px;
+  height: 60px;
+  padding: 20px;
 }
 
 
 /* FOOTER */
-
 /* Контакты */
 
 .page-footer {
@@ -361,6 +372,9 @@ opacity: 0.6;
  }
  .social-button.button {
   padding: 10px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
  .contacts-phone {
   font-size: 40px;
@@ -376,9 +390,7 @@ opacity: 0.6;
 
 
 /*CATALOG*/
-
 /* MAIN*/
-
 /*Гостиницы Седоны*/
 
 .inner-header {
@@ -474,17 +486,14 @@ opacity: 0.6;
   margin-bottom: 0;
 }
 
-
-/*CATALOG*/
-
-/* MAIN*/
 /*Результаты поиска:Сортировка*/
-
+.main-inner {
+  margin-top: -15px;
+}
 .rezult{
   width: 1060px;
   padding: 50px 70px 0px 70px;
 }
-
 .select-block {
   display: flex;
   height: 49px;
@@ -529,43 +538,36 @@ opacity: 0.6;
   margin: 0;
   margin-bottom: 96px;
   padding: 0;
-  gap: 20px;
+  gap: 0 20px;
 }
 .place-card {
   width: 300px;
   min-height: 398px;
   padding: 20px;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  gap: 16px 20px;
 }
 .place-card-image {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 16px;
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 .place-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   margin: 0;
-  margin-bottom: 16px;
-  padding: 0;
-}
-.place-card-content {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: space-around;
-  justify-content: space-between;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 .place-criteries {
   color: #333333;
   padding: 0;
   margin-bottom: 16px;
   width: 140px;
-
+  margin: 0;
 }
 .more-info {
   font-size: 16px;
@@ -575,6 +577,7 @@ opacity: 0.6;
   min-width: 110px;
   padding: 9px 15px;
   margin-bottom: 16px;
+  margin: 0;
 }
 .add-favorite {
   background: #82B3D3;
@@ -584,6 +587,7 @@ opacity: 0.6;
   min-width: 110px;
   padding: 9px 15px;
   margin-bottom: 16px;
+  margin: 0;
 }
 .added-favorite {
   background: #7DB54F;
@@ -592,14 +596,7 @@ opacity: 0.6;
   line-height: 20px;
   min-width: 110px;
   padding: 9px 15px;
-  margin-bottom: 16px;
-}
-.place-rating {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 0;
 }
 .hotel-rating {
   background: #F2F2F2;
@@ -612,11 +609,11 @@ opacity: 0.6;
   min-height: 20px;
   padding: 9px 15px;
   margin: 0;
-  margin-bottom: 20px;
 }
 .rating-star {
   display: flex;
   flex-direction: row;
+  margin: 0;
 }
 
 /*Пагинация*/
@@ -626,6 +623,7 @@ opacity: 0.6;
   height: 60px;
   padding: 0px;
   margin: 0px;
+  align-items: center;
 }
 .pagination {
 font-weight: 700;
@@ -662,6 +660,9 @@ background: #F2F2F2;
 }
 .current-link {
   color: #000000;
+}
+.searching-results-page {
+  margin: 0;
 }
 .page-select {
   width: 160px;
