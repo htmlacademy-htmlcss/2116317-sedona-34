@@ -33,7 +33,16 @@ body {
 }
 
 /*Общие стили*/
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .button {
   font-family: "PT Sans",sans-serif;
   font-size: 20px;
@@ -47,16 +56,113 @@ body {
   text-transform: uppercase;
   border-radius: 4px;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+/*Общие стили. Состояние элементов*/
+.brown:hover {
+  background-color: #615048;
 }
+.brown:focus {
+  background-color: #615048;
+}
+.brown:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+.brown:disabled:hover {
+  background-color: #E5E5E5;
+  outline: none;
+  cursor: default;
+}
+
+.blue:hover {
+  background-color: #68A2CA;
+}
+.blue:focus {
+  background-color: #68A2CA;
+}
+.blue:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+.blue:disabled:hover {
+  background-color: #E5E5E5;
+  outline: none;
+  cursor: default;
+}
+
+.green:hover {
+  background-color: #6C9E42;
+}
+.green:focus {
+  background-color: #6C9E42;
+}
+.green:active {
+  background-color: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
+.green:disabled:hover {
+  background-color: #E5E5E5;
+  outline: none;
+  cursor: default;
+}
+.social-icon {
+  fill: #83B3D3;
+}
+.social-icon:hover {
+  fill: #68A2CA;
+}
+.social-icon:focus {
+  fill: #68A2CA;
+}
+.social-icon:active {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.contacts-phone:hover {
+  color: #756157;
+}
+.contacts-phone.button:focus {
+  color: #756157;
+}
+.contacts-phone:active {
+  color:rgba(117, 97, 87, 0.3);
+}
+
+
+.footer-contacts-logo:hover {
+  fill: #756157;
+}
+.footer-contacts-logo:focus {
+  color: #756157;
+}
+.footer-contacts-logo:active {
+  color:rgba(117, 97, 87, 0.3);
+}
+
+.button-select:hover {
+  border: 2px solid #000000;
+}
+.button-select:focus {
+  border: 2px solid #68A2CA;
+}
+.button-select:active {
+  border: 2px solid #000000;
+}
+
+
+.pagination-item:not(.current-item):hover {
+  background-color: #68A2CA;
+}
+.pagination-item:not(.current-item):focus {
+  background-color: #68A2CA;
+}
+.pagination-item:not(.current-item):active {
+  background-color: #82B3D3;
+}
+.pagination-link:not(.current-link):active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
 /*Общие стили- HEADER */
 .header-title{
   display: flex;
@@ -73,6 +179,8 @@ body {
 }
 .logotipe {
   display: block;
+  position: relative;
+  z-index: 1;
 }
 .navigation {
   display: flex;
@@ -94,9 +202,31 @@ body {
   margin: 0;
   padding: 20px 17px;
   text-align: center;
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
+  position: relative;
 }
+.navigation-link-current::before {
+  position: absolute;
+  bottom: 0;
+  height: 0px;
+  width: 63px;
+  border: 2px solid #756257;
+  content: "";
+  background-color: #756257;
+  z-index: 1;
+}
+.navigation-link-current-catalog::before {
+  position: absolute;
+  bottom: 0;
+  height: 0px;
+  width: 93px;
+  border: 2px solid #756257;
+  content: "";
+  background-color: #756257;
+  z-index: 1;
+}
+
 .navigation-button {
   background: #756157;
   min-width: 130px;
@@ -110,14 +240,24 @@ body {
 .navigation-user{
   display: flex;
   flex-wrap: wrap;
-  width: 265px;
+  width: 300px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
   }
   .navigation-list.navigation-user {
     min-width: 42px;
     min-height: 66px;
+  }
+   .navigation-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
   }
 
 
@@ -137,7 +277,18 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 63px;
+  position: relative;
+
   }
+.filter {
+  position: absolute;
+  background-image: url(../images/html/filter.svg);
+  bottom: 0px;
+  height: 57px;
+  width: 1200px;
+}
+
+
 
 .main-picture-welcome {
   margin: 51px auto 83px 372px;
@@ -232,6 +383,24 @@ text-align: center;
 }
 .midle-item {
   background: #FFFFFF;
+}
+.first {
+  background-image: url(../images/html/logo-home.svg);
+  background-repeat: no-repeat;
+  background-size: 74px 70px;
+  background-position: center 40px;
+}
+.second {
+  background-image: url(../images/html/logo-burger.svg);
+  background-repeat: no-repeat;
+  background-size: 74px 70px;
+  background-position: center 40px;
+}
+.third {
+  background-image: url(../images/html/logo-present.svg);
+  background-repeat: no-repeat;
+  background-size: 74px 70px;
+  background-position: center 40px;
 }
 .title-fourth-level {
   font-size: 24px;
@@ -405,6 +574,7 @@ opacity: 0.6;
 
 .inner-header-title {
   margin: 0;
+  margin-bottom: 10px;
   padding: 0;
   font-weight: 700;
   font-size: 60px;
@@ -414,18 +584,32 @@ opacity: 0.6;
 .breadcrumbs {
   display: flex;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   font-size: 16px;
   line-height: 21px;
   margin-bottom: 30px;
   list-style-type: none;
   min-width: 111px;
+  background-image: url(../images/catalog/vector-bread.svg);
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  background-position: center left 22px;
 }
 .breadcrumbs-item {
   margin-right: 10px;
 }
 .breadcrumbs-item:last-child {
   margin: 0;
+}
+.breadcrumbs-link {
+  display: block;
+  margin: 0;
+  padding: 10px 20px 10px 0px;
+}
+
+
+.navigation-icon-catalog {
+
 }
 .criteries-filter {
   margin: 0;
@@ -488,7 +672,7 @@ opacity: 0.6;
 
 /*Результаты поиска:Сортировка*/
 .main-inner {
-  margin-top: -15px;
+  margin-top: -5px;
 }
 .rezult{
   width: 1060px;
@@ -523,6 +707,8 @@ opacity: 0.6;
   .button-select {
     padding: 16px 17px;
     margin-right: 8px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
   }
   .button-select:last-child {
     margin-right: 0px;
@@ -553,6 +739,9 @@ opacity: 0.6;
   display: block;
   grid-column-start: 1;
   grid-column-end: -1;
+}
+place-card-icon {
+
 }
 .place-card-title {
   font-weight: 700;
@@ -614,6 +803,11 @@ opacity: 0.6;
   display: flex;
   flex-direction: row;
   margin: 0;
+  background-image: url(../images/catalog/logo-star.svg);
+  list-style-type: none;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: center left 22px;
 }
 
 /*Пагинация*/
