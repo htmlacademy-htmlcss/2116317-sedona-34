@@ -57,8 +57,8 @@
     <ul class="breadcrumbs">
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link" href="index.html"><span class="visually-hidden">Главная</span>
-          <svg class="navigation-icon-catalog" aria-hidden="true" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="m.162 6.15 6-5.5 6 5.5v6.2h-12v-6.2Zm1 .4v4.8h10v-4.8l-5-4.5-5 4.5Zm4 3.8h-1v-3.5h4v3.5h-1v-2.5h-2v2.5Z" fill="#fff"/></svg>
+          <svg class="navigation-icon-catalog" aria-hidden="true" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="m.162 6.15 6-5.5 6 5.5v6.2h-12v-6.2Zm1 .4v4.8h10v-4.8l-5-4.5-5 4.5Zm4 3.8h-1v-3.5h4v3.5h-1v-2.5h-2v2.5Z"/></svg>
         </a>
       </li>
       <li class="breadcrumbs-item">
@@ -76,19 +76,22 @@
           <ul class="criteries-filter-list">
             <li class="criteries-filter-item">
               <label class="control">
-                <input class="control-input" type="checkbox" checked name="swimming pool">
+                <input class="visually-hidden control-input" type="checkbox" checked name="swimming pool" checked>
+                <span class="control-mark"></span>
                 Бaссейн
               </label>
             </li>
             <li class="criteries-filter-item">
               <label class="control">
-                <input class="control-input" type="checkbox" checked name="parking">
+                <input class="visually-hidden control-input" type="checkbox" checked name="parking" checked>
+                <span class="control-mark"></span>
                 Парковка
               </label>
             </li>
             <li class="criteries-filter-item">
               <label class="control">
-                <input class="control-input" type="checkbox" name="wi-fi">
+                <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
+                <span class="control-mark"></span>
                 Wi-Fi
               </label>
             </li>
@@ -101,24 +104,59 @@
           <ul class="criteries-filter-list">
             <li class="criteries-filter-item">
               <label class="control">
-                <input class="control-input" type="radio" name="criteries-group" value="hotel" checked>
+                <input class="visually-hidden control-input" type="radio" name="criteries-group" value="hotel" checked>
+                <span class="control-mark"></span>
                 Гостиница
               </label>
             </li>
             <li class="criteries-filter-item">
               <label class="control">
-                <input class="control-input" type="radio" name="criteries-group" value="motel">
+                <input class="visually-hidden control-input" type="radio" name="criteries-group" value="motel">
+                <span class="control-mark"></span>
                 Мотель
               </label>
             </li>
             <li class="criteries-filter-item">
               <label class="control">
-                <input class="control-input" type="radio" name="criteries-group" value="apartaments">
+                <input class="visually-hidden control-input" type="radio" name="criteries-group" value="apartaments">
+                <span class="control-mark"></span>
                 Апартаменты
               </label>
             </li>
           </ul>
         </fieldset>
+<!--Ползунок-->
+<fieldset class="catalog-filter-group">
+<legend class="catalog-filter-title">Стоимость, ₽:</legend>
+
+<div class="range">
+  <div class="range-wrapper-inputs">
+    <label class="catalog-filter-label min">
+     <input class="range-input" type="number" value="0" name="min-price">
+     <span class="range-imput-text">от</span>
+    </label>
+    <label class="catalog-filter-label max">
+      <input class="range-input" type="number" value="9000" name="max-price">
+      <span class="range-imput-text">до</span>
+      <label>
+  </div>
+
+
+  <div class="range-scale">
+    <div class="range-bar" style="left: 0; width: 228px">
+      <button class="range-toggle toggle-min">
+        <span class="visually-hidden">Изменить минимальную цену.</span>
+      </button>
+      <button class="range-toggle toggle-max">
+        <span class="visually-hidden">Изменить максимальную цену.</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+        </fieldset>
+
 <!-- Кнопки:применить/сбросить-->
       <div class="criteries-filter-buttons">
          <button class="criteries-button button blue" type="submit">Применить</button>

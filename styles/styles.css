@@ -208,6 +208,51 @@ body {
 }
 
 
+.criteries-reset:hover {
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+.criteries-reset:focus {
+  border: 3px solid #83B3D3;
+}
+.criteries-reset:active {
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+.criteries-reset:focus-visible {
+  background-color: #D2B48C;
+  outline: none;
+}
+
+.navigation-icon-catalog
+.navigation-icon-catalog:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.breadcrumbs-link:focus .navigation-icon-catalog {
+  color: #FFFFFF;
+}
+.breadcrumbs-link:active .navigation-icon-catalog {
+  color: rgba(255, 255, 255, 0.3);
+}
+.breadcrumbs-link:disabled:hover .navigation-icon-catalog {
+  color: #D2B48C;
+  outline: none;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.breadcrumbs-link:focus {
+  color: #FFFFFF;
+}
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.breadcrumbs-link:disabled:hover {
+  color: #D2B48C;
+  outline: none;
+}
+
 .pagination-link:not(.current-link):hover {
   background-color: #68A2CA;
 }
@@ -225,7 +270,90 @@ body {
   outline: none;
 }
 
+.range-toggle:hover {
+  background-color: #FFFFFF;
+}
+.range-toggle:active {
+  background: #FFFFFF;
+  border: 2px solid #83B3D3;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+.range-toggle:focus {
+  background: #FFFFFF;
+  border: 3px solid #83B3D3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.range-toggle:focus-visible {
+  background-color: #D2B48C;
+  outline: none;
+}
 
+.catalog-filter-label.min:hover {
+  border: 2px solid #FFFFFF;
+  border-radius: 4px 0px 0px 4px;
+  opacity: 0.6;
+}
+.catalog-filter-label.min:active {
+  background: #756257;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px 0px 0px 4px;
+}
+.catalog-filter-label.min:focus {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 0px 0px 3px #81B3D2;
+  border-radius: 4px 0px 0px 4px;
+}
+.catalog-filter-label.min:focus-visible {
+  background-color: #D2B48C;
+  outline: none;
+}
+
+.catalog-filter-label.max:hover {
+  opacity: 0.6;
+  border: 2px solid #FFFFFF;
+  border-radius: 0px 4px 4px 0px;
+}
+.catalog-filter-label.max:active {
+  background: #756257;
+  border: 2px solid #FFFFFF;
+  border-radius: 0px 4px 4px 0px;
+}
+.catalog-filter-label.max:focus {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 0px 0px 3px #81B3D2;
+  border-radius: 0px 4px 4px 0px;
+}
+.catalog-filter-label.max:focus-visible {
+  background-color: #D2B48C;
+  outline: none;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background: #3F5E72;
+  border-radius: 50%;
+  content: "";
+}
+.control-input:focus {
+  border: 3px solid #83B3D3;
+}
+
+.control:hover .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+}
+.control:focus .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+  border: 3px solid #83B3D3;
+}
+.control-input:disabled + .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+}
 
 
 /*Общие стили- HEADER */
@@ -657,36 +785,6 @@ opacity: 0.6;
   padding: 10px 20px 10px 0px;
 }
 
-.navigation-icon-catalog
-.navigation-icon-catalog:hover {
-  color: rgba(255, 255, 255, 0.6);
-}
-.breadcrumbs-link:focus .navigation-icon-catalog {
-  color: #FFFFFF;
-}
-.breadcrumbs-link:active .navigation-icon-catalog {
-  color: rgba(255, 255, 255, 0.3);
-}
-.breadcrumbs-link:disabled:hover .navigation-icon-catalog {
-  color: #D2B48C;
-  outline: none;
-}
-
-.breadcrumbs-link:hover {
-  color: rgba(255, 255, 255, 0.6);
-}
-.breadcrumbs-link:focus {
-  color: #FFFFFF;
-}
-.breadcrumbs-link:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-.breadcrumbs-link:disabled:hover {
-  color: #D2B48C;
-  outline: none;
-}
-
-
 .criteries-filter {
   margin: 0;
   padding: 0;
@@ -722,7 +820,11 @@ opacity: 0.6;
   margin-bottom: 0;
 }
 .criteries-filter-buttons {
+  display: flex;
   width: 160px;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 60px;
  }
 .criteries-button {
   background: #82B3D3;
@@ -745,6 +847,132 @@ opacity: 0.6;
   padding: 20px;
   margin-bottom: 0;
 }
+/*Чекбокс-квадратики*/
+.control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
+}
+.control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  content: "";
+  background-image: url(../images/catalog/check-Vector.svg);
+  background-repeat: no-repeat;
+}
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+
+
+/*Ползунок*/
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: capitalize;
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+}
+.catalog-filter-group {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  border: none;
+}
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: red;
+}
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+/*Ручки*/
+.range-toggle {
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+/*Поле ввода мин/макс цены*/
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+  width: 288px;
+  min-height: 48px;
+  margin: 0;
+  margin-bottom: 32px;
+}
+.catalog-filter-label.min {
+  display: flex;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  width: 144px;
+  padding: 12px 14px;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px 0px 0px 4px;
+}
+.catalog-filter-label.max {
+  display: flex;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  width: 144px;
+  padding: 12px 14px;
+  border: 2px solid #FFFFFF;
+  border-left: none;
+  border-radius: 0px 4px 4px 0px;
+}
+.range-input {
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  width: 70px;
+}
+.range-imput-text {
+  opacity: 0.3;
+}
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 
 /*Результаты поиска:Сортировка*/
 .main-inner {
